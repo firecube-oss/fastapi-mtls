@@ -3,9 +3,11 @@ from pathlib import Path
 from typing import List, Union
 
 import trustme
-from cryptography.hazmat.primitives.serialization import (NoEncryption,
-                                                          load_pem_private_key,
-                                                          pkcs12)
+from cryptography.hazmat.primitives.serialization import (
+    NoEncryption,
+    load_pem_private_key,
+    pkcs12,
+)
 from cryptography.x509 import load_pem_x509_certificates
 from loguru import logger
 
