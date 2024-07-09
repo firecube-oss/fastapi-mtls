@@ -93,7 +93,9 @@ def hints(openssl_hints: bool):
         f"""\n You will need to install root certificate and Client Certificate Bundle. Run: 
         \n ⌨️  Get-ChildItem -Path '{root_ca.storage_path/PrimitivePaths.CERTIFICATE}' | Import-Certificate -CertStoreLocation cert:\CurrentUser\Root 
         \n ⌨️  Get-ChildItem -Path '{client_certificate.storage_path/PrimitivePaths.PFX}' | Import-PfxCertificate -CertStoreLocation Cert:\CurrentUser\My 
-        \n 🍎 security import '{root_ca.storage_path/PrimitivePaths.CERTIFICATE}' -k ~/Library/Keychains/login.keychain"""
+        \n 🍎 security import '{root_ca.storage_path/PrimitivePaths.CERTIFICATE}' -k ~/Library/Keychains/login.keychain
+        \n 🐧 Coming Soon?
+        """
     )
     if openssl_hints:
         logger.info(
